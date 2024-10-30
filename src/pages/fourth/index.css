@@ -1,0 +1,87 @@
+/* src/pages/SecondScreen.css */
+.fourth-screen-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('@/assets/images/space_v.png') center/cover no-repeat;
+  position: relative;
+}
+.down-arrow,
+.top-arrow {
+  position: absolute;
+  left: 3.75rem;
+  bottom: 80px;
+  width: 40px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.down-arrow {
+  bottom: 10%;
+}
+.top-arrow {
+  top: 10%;
+}
+
+.down-arrow:hover,
+.top-arrow:hover {
+  transform: scale(1.1);
+}
+.scrolling-text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrolling-text {
+  color: white;
+  position: relative;
+  animation: scroll 50s linear infinite; /* 스크롤 애니메이션 */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(60%); /* 시작 위치 */
+  }
+  100% {
+    transform: translateY(-100%); /* 끝 위치 */
+  }
+}
+
+.hidden {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가운데 정렬 */
+  opacity: 1; /* 초기 불투명도 */
+}
+
+.end_copyright {
+  text-align: center; /* 가운데 정렬 */
+}
+.social-icons {
+  padding-top: 36px;
+  .insta {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+
+  .youtube {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+  .github {
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+}

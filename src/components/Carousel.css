@@ -1,0 +1,115 @@
+.carousel-container {
+  margin-top: 3rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  perspective: 300px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.slide {
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  width: 22vh;
+  height: 26vh;
+  position: absolute;
+  border-radius: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.slide-description {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: -8px;
+  background-color: #489fad;
+  color: white;
+  z-index: -1;
+}
+.slide-title {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: bold;
+}
+
+.slide:nth-of-type(5) {
+  transform: translate(calc(-40% * 2.5), -50%) translateZ(-100px);
+}
+
+.slide:nth-of-type(6) {
+  transform: translate(calc(-35% * 2.5), -50%) translateZ(-75px);
+}
+
+.slide:nth-of-type(7) {
+  transform: translate(calc(-30% * 2.5), -50%) translateZ(-50px);
+}
+
+.slide:nth-of-type(1) {
+  transform: translate(calc(-50% * 1), -52%) translateZ(25px);
+}
+
+.slide:nth-of-type(2) {
+  transform: translate(calc(-25% * 1), -50%) translateZ(-50px);
+}
+
+.slide:nth-of-type(3) {
+  transform: translate(calc(-5% * 2.5), -50%) translateZ(-75px);
+}
+
+.slide:nth-of-type(4) {
+  transform: translate(calc(0% * 2.5), -50%) translateZ(-100px);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  width: 15%;
+  height: 15%;
+}
+
+.arrow:hover {
+  color: gray;
+}
+.buttons {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: WHITE;
+  font-size: 36px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+}

@@ -1,0 +1,110 @@
+/* src/pages/FirstScreen.css */
+.first-screen-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('@/assets/images/space_v.png') center/cover no-repeat;
+  animation: zoomInOut 10s infinite;
+  z-index: -0;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  color: #000;
+  z-index: 3;
+}
+
+.text-container {
+  text-align: center;
+}
+.planet {
+  margin-top: 5vh;
+  width: 200px;
+  animation: rotate 120s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.text-container p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.text-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.vertical-line {
+  position: fixed;
+  left: 5rem;
+  top: 0;
+  height: 100vh;
+  border-left: 1px dotted rgb(255, 255, 255);
+  z-index: 3;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.8rem;
+}
+.astronaut {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  transition:
+    top 10s ease,
+    left 10s ease,
+    right 10s ease,
+    bottom 10s ease;
+  z-index: 3;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.down-arrow {
+  position: absolute;
+  left: 3.75rem;
+  bottom: 80px;
+  width: 40px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.down-arrow:hover {
+  transform: scale(1.1);
+}

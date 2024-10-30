@@ -1,0 +1,30 @@
+/* src/pages/SecondScreen.css */
+.second-screen-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('@/assets/images/space_v.png') center/cover no-repeat;
+  position: relative;
+}
+.down-arrow,
+.top-arrow {
+  position: absolute;
+  left: 3.75rem;
+  bottom: 80px;
+  width: 40px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.down-arrow {
+  bottom: 10%; /* 아래 버튼 위치 */
+}
+.top-arrow {
+  top: 10%; /* 위 버튼 위치 */
+}
+
+.down-arrow:hover,
+.top-arrow:hover {
+  transform: scale(1.1); /* 마우스 오버 시 크기 증가 */
+}
