@@ -35,6 +35,7 @@ const FirstScreen = () => {
     <div className="first-screen-container">
       <div className="background" />
       <img src={logo} alt="Logo" className="logo" />
+      <div className="add">지원 하러가기</div>
       <div className="text-container">
         <p>안녕하세요! 마스외전 입니다.</p>
         <h2>마스외전 5기를 찾고 있습니다.</h2>

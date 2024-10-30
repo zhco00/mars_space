@@ -41,7 +41,7 @@
 .scrolling-text {
   color: white;
   position: relative;
-  animation: scroll 50s linear infinite; /* 스크롤 애니메이션 */
+  animation: scroll 60s linear infinite; /* 스크롤 애니메이션 */
 }
 
 @keyframes scroll {
