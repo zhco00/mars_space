@@ -1,37 +1,82 @@
 import downArrow from '@/assets/images/svg/down.svg';
 import topArrow from '@/assets/images/svg/top.svg';
-import Carousel from '@/components/Carousel';
+import LeftArrow from '@/assets/images/svg/left.svg';
 import './index.css';
+import What from '@/pages/what/what';
+import Where from '@/pages/where/where';
+import Who from '@/pages/who/who';
+import { useState, useEffect } from 'react';
+import { useTransition, animated, useSpringRef } from '@react-spring/web';
+
+const pages = [
+  ({ style, setIndex }) => (
+    <animated.div className="page lightpink" style={style}>
+      <h2 className="page-title">마스외전에 놀러와</h2>
+      <h3 className="page-subtitle" onClick={() => setIndex(1)}>
+        우리는
+      </h3>
+      <h3 className="page-subtitle" onClick={() => setIndex(2)}>
+        어디서
+      </h3>
+      <h3 className="page-subtitle" onClick={() => setIndex(3)}>
+        무엇을 할까
+      </h3>
+    </animated.div>
+  ),
+  Who,
+  Where,
+  What,
+];
 
 const SecondScreen = () => {
-  const scrollToNextScreen = () => {
-    window.scrollTo({
-      top: window.innerHeight * 2,
-      behavior: 'smooth',
-    });
-  };
+  const [index, setIndex] = useState(0);
+  const transRef = useSpringRef();
 
-  const scrollToUpScreen = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  const transitions = useTransition(index, {
+    ref: transRef,
+    keys: null,
+    from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
+    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+    leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
+  });
+
+  useEffect(() => {
+    transRef.start();
+  }, [index]);
 
   return (
     <div className="second-screen-container">
-      <img
-        src={topArrow}
-        alt="Top Arrow"
-        className="top-arrow"
-        onClick={scrollToUpScreen}
-      />
-      <img
-        src={downArrow}
-        alt="Down Arrow"
-        className="down-arrow"
-        onClick={scrollToNextScreen}
-      />
+      {transitions((style, i) => {
+        const Page = pages[i];
+        return <Page style={style} setIndex={setIndex} />;
+      })}
+      {index === 0 ?
+        <>
+          <img
+            src={topArrow}
+            alt="Top Arrow"
+            className="top-arrow"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          />
+          <img
+            src={downArrow}
+            alt="Down Arrow"
+            className="down-arrow"
+            onClick={() =>
+              window.scrollTo({
+                top: window.innerHeight * 2,
+                behavior: 'smooth',
+              })
+            }
+          />
+        </>
+      : <img
+          src={LeftArrow}
+          alt="Left Arrow"
+          className="left-arrow"
+          onClick={() => setIndex(0)}
+        />
+      }
     </div>
   );
 };

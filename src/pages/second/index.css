@@ -1,30 +1,71 @@
-/* src/pages/SecondScreen.css */
 .second-screen-container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: url('@/assets/images/space_v.png') center/cover no-repeat;
   position: relative;
+  font-family: 'SejongGeulggot', sans-serif;
 }
+
 .down-arrow,
-.top-arrow {
+.top-arrow,
+.left-arrow {
   position: absolute;
   left: 3.75rem;
-  bottom: 80px;
   width: 40px;
   cursor: pointer;
   transition: transform 1s;
 }
-
+.left-arrow,
 .down-arrow {
-  bottom: 10%; /* 아래 버튼 위치 */
+  bottom: 10%;
 }
+
 .top-arrow {
-  top: 10%; /* 위 버튼 위치 */
+  top: 10%;
 }
 
 .down-arrow:hover,
 .top-arrow:hover {
-  transform: scale(1.1); /* 마우스 오버 시 크기 증가 */
+  transform: scale(1.1);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  top: 0;
+}
+
+.page-subtitle {
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+  margin-top: 10%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page-subtitle:hover {
+  color: #ff6b6b !important;
+  transform: scale(1.1) !important;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  will-change: transform, opacity;
+  text-shadow:
+    0px 2px 40px #00000020,
+    0px 2px 5px #00000030;
+  user-select: none;
 }

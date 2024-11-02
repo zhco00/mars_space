@@ -9,6 +9,7 @@
   justify-content: center;
   color: white;
   overflow: hidden;
+  font-family: 'SejongGeulggot', sans-serif;
 }
 
 .background {
@@ -48,11 +49,12 @@
   top: 1%;
   right: 0;
   font-weight: 600;
-  font-size: medium;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 1;
 }
 .text-container {
   text-align: center;
@@ -71,12 +73,12 @@
   }
 }
 .text-container p {
-  font-size: 1.2rem;
+  font-size: 1.5rem !important;
   margin: 0;
 }
 
 .text-container h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin: 20px 0;
 }
@@ -93,7 +95,7 @@
 .footer {
   position: absolute;
   bottom: 20px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .astronaut {
   position: fixed;

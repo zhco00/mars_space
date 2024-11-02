@@ -1,5 +1,6 @@
 .carousel-container {
   margin-top: 3rem;
+  font-family: 'SejongGeulggot', sans-serif;
 }
 
 .container {
@@ -33,7 +34,7 @@
   border-radius: 10px;
 }
 .slide-description {
-  font-size: 14px;
+  font-size: 1.3rem;
   text-align: center;
   font-weight: bold;
   width: 100%;
@@ -51,6 +52,7 @@
   font-size: 0.9rem;
   color: white;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .slide:nth-of-type(5) {

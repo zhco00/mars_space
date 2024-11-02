@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'SejongGeulggot';
+  src: url('./fonts/SejongGeulggot.ttf') format('truetype');
+}
+
+body {
+  font-family: 'SejongGeulggot', sans-serif;
+}

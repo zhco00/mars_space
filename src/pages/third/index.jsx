@@ -21,7 +21,7 @@ const ThirdScreen = () => {
   return (
     <div className="third-screen-container">
       <div className="text-container">
-        <h1>마스외전에서 같이 놀아볼래?</h1>
+        <h1>마스외전에서 같이 공부하자!</h1>
         <p>1기부터 현재 5기, 깍두기들과 함께 진행한 5년의 기록물이야.</p>
       </div>
       <Carousel />
