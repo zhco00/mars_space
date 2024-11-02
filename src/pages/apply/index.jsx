@@ -100,6 +100,7 @@ const Apply = () => {
 
   const handleApplyClick = () => {
     navigate('/');
+    window.scrollTo({ top: 0, left: 0 });
   };
 
   const scrollToSection = (sectionIndex) => {

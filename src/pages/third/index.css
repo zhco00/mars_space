@@ -1,11 +1,10 @@
-/* src/pages/index.css */
 .third-screen-container {
   position: relative;
-  height: 100vh; /* 화면의 높이를 100%로 설정 */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 수평 중앙 정렬 */
-  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center;
+  justify-content: center;
   background: url('@/assets/images/space_v.png') center/cover no-repeat;
   font-family: 'SejongGeulggot', sans-serif;
 }
@@ -14,17 +13,17 @@
   position: absolute;
   top: 18%;
   text-align: center;
-  color: white; /* 텍스트 색상 */
+  color: white;
 }
 
 .text-container h1 {
-  font-size: 1.4rem; /* 제목 크기 */
-  font-weight: bold; /* 두껍게 */
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .text-container p {
-  font-size: 1.1rem; /* 본문 크기 */
-  margin-top: 10px; /* 제목과 본문 간격 */
+  font-size: 1.1rem;
+  margin-top: 10px;
   font-weight: 600;
   margin-left: 1.2rem;
   margin-right: 1.2rem;
@@ -33,12 +32,12 @@
 .down-arrow,
 .top-arrow {
   position: absolute;
-  width: 40px; /* 버튼 크기 */
-  cursor: pointer; /* 커서 스타일 */
-  transition: transform 1s; /* 마우스 오버 시 애니메이션 */
+  width: 40px;
+  cursor: pointer;
+  transition: transform 1s;
 }
 
 .down-arrow:hover,
 .top-arrow:hover {
-  transform: scale(1.1); /* 마우스 오버 시 크기 증가 */
+  transform: scale(1.1);
 }

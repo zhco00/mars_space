@@ -19,11 +19,10 @@ body {
   display: flex;
   flex-direction: column;
   background: #000;
-  font-family: Arial, sans-serif;
 }
 .first-screen,
 .second-screen,
 .third-screen,
 .fourth-screen {
-  height: 100vh; /* 각 화면이 전체 화면을 차지하게 설정 */
+  height: 100vh;
 }

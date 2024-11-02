@@ -17,7 +17,7 @@ const FourthScreen = () => {
 
   const scrollToUpScreen = () => {
     window.scrollTo({
-      top: window.innerHeight * 2, // 두 번째 화면으로 이동
+      top: window.innerHeight * 2,
       behavior: 'smooth',
     });
   };
