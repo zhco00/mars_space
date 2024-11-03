@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import doubleTop from '@/assets/images/svg/doubleTop.svg';
 import topArrow from '@/assets/images/svg/top.svg';
 import iconInsta from '@/assets/images/svg/icon-insta.svg';
