@@ -7,7 +7,7 @@ import downArrow from '@/assets/images/svg/down.svg';
 import './index.css';
 
 const FirstScreen = () => {
-  const navigate = useNavigate(); // navigate 객체 가져오기
+  const navigate = useNavigate();
   const [position, setPosition] = useState({ top: 0, left: 0 });
 
   useEffect(() => {
